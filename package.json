@@ -16,5 +16,9 @@
   "author": {
     "name": "Victor Fellype",
     "email": "victor.fellype.a@gmail.com"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victufell/aniscrollable"
+  },
 }
