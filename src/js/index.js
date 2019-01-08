@@ -1,4 +1,4 @@
-function aniScrollable() {
+function showlllable() {
   var debounce = function(func, wait, immediate) {
     var timeout
     
@@ -45,8 +45,8 @@ function aniScrollable() {
 
 if (typeof window !== 'undefined' && window) {
 	if (typeof module === 'object' && module.exports) {
-	  	module.exports = aniScrollable;
+	  	module.exports = showlllable;
 	} else {
-	    window.aniScrollable = aniScrollable;
+	    window.showlllable = showlllable;
 	}
 }
