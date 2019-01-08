@@ -1,4 +1,4 @@
-function showlllable() {
+function showllable() {
   var debounce = function(func, wait, immediate) {
     var timeout
     
@@ -45,8 +45,8 @@ function showlllable() {
 
 if (typeof window !== 'undefined' && window) {
 	if (typeof module === 'object' && module.exports) {
-	  	module.exports = showlllable;
+	  	module.exports = showllable;
 	} else {
-	    window.showlllable = showlllable;
+	    window.showllable = showllable;
 	}
 }
