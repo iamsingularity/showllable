@@ -2,12 +2,12 @@ function aniScrollable() {
   var debounce = function(func, wait, immediate) {
     var timeout
     
-    return function(...args) {
+    return function(arguments) {
       var context = this
       
       var later = function () {
         timeout = null
-        if (!immediate) func.apply(context, args)
+        if (!immediate) func.apply(context, arguments)
       }
       
       var callNow = immediate && !timeout
@@ -15,7 +15,7 @@ function aniScrollable() {
       clearTimeout(timeout)
       timeout = setTimeout(later, wait)
       
-      if (callNow) func.apply(context, args)
+      if (callNow) func.apply(context, arguments)
     }
   }
    
@@ -24,13 +24,14 @@ function aniScrollable() {
    
   function animeScroll() {
     var windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-    target.forEach((element) => {
+    
+    target.forEach(function() {
       if(windowTop > element.offsetTop) {
         element.classList.add(animationClass, element)
       } else {
         element.classList.remove(animationClass, element)
       }
-    })
+    });
   }
    
   animeScroll();
