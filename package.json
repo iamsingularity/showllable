@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victufell/aniscrollable"
+    "url": "git+https://github.com/victufell/showllable"
   },
   "devDependencies": {
     "del": "^2.0.2",
