@@ -25,7 +25,7 @@ function showllable() {
   function animeScroll() {
     var windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
     
-    target.forEach(function() {
+    target.forEach(function(element) {
       if(windowTop > element.offsetTop) {
         element.classList.add(animationClass, element)
       } else {
