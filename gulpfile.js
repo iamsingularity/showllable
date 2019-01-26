@@ -1,10 +1,10 @@
-var autoprefixer = require('gulp-autoprefixer');
-var csso = require('gulp-csso');
-var del = require('del');
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var uglify = require('gulp-uglify');
-var pump = require('pump');
+const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
+const del = require('del');
+const gulp = require('gulp');
+const runSequence = require('run-sequence');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -25,14 +25,14 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./dist/css'))
 });
 
-gulp.task('scripts', function (cb) {
-  pump([
-        gulp.src('./src/js/**/*.js'),
-        uglify(),
-        gulp.dest('dist/js')
-    ],
-    cb
-  );
+gulp.task('scripts', function () {
+  gulp.src('./src/js/index.js')
+      .pipe(babel({
+        presets: ['@babel/env']
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/js'))
+  
 });
 
 gulp.task('clean', function() {
