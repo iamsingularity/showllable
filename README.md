@@ -16,7 +16,7 @@ You have to follow two steps to use it
 
 Now we have to analyze if you are using React or vanilla js.
 
-If you are using React, in the application didmount you execute a function that is going global (if you are importing the lib file right).
+If you are using React, import the showllable function and invoke the componentDidMount of your application.
 
 ```js
 componentDidMount(){
@@ -24,7 +24,9 @@ componentDidMount(){
 }
 ```
 
-If you are using vanillajs, it is simpler, just import the script in your application and load the page invoke the lib function
+I usually put in AppLayout's didMount, but it depends on its architecture.
+
+If you are using vanillajs, it is simpler, just import the script in your application and load the page or in the DOMContentLoaded event invoke the lib function
 
 ```js
 showllable()
