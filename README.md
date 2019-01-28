@@ -1,6 +1,6 @@
 # showllable
 
-is a simple way to apply animations to your pages, the focus of the library and animations that your elements appear in the course of the page scroll
+is a simple way to apply animations to your pages, the focus of the library and animations that your elements appear in the course of the page scroll.
 
 How to use
 
@@ -32,7 +32,7 @@ If you are using vanillajs, it is simpler, just import the script in your applic
 showllable()
 ```
 
-After doing these two steps you are free to use apply the animations in your entire project, just go to the element you want to animate and put a date-anime attribute with the value symbolizing the side you want to animate
+After doing these two steps you are free to use apply the animations in your entire project, just go to the element you want to animate and put a date-anime attribute with the value symbolizing the side you want to animate.
 
 ```html
 <div data-anime='top'></div>
@@ -43,4 +43,4 @@ After doing these two steps you are free to use apply the animations in your ent
 <div data-anime='rotate-to-left'></div>
 ```
 
-Ready ! just use the scroll of the page that the indicated elements will animate with the position that you defined
+Ready ! just use the scroll of the page that the indicated elements will animate with the position that you defined.
