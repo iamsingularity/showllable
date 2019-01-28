@@ -15,9 +15,9 @@ const setIntersectionObserver = (elements) => {
       const target = entry.target.classList;
       
       if (entry.intersectionRatio > 0) {
-				target.add('animate');
+				target.add('-animator');
 			} else {
-				target.remove('animate');
+				target.remove('-animator');
 			}
 
 		});
@@ -37,7 +37,7 @@ const showllable = () => {
     setIntersectionObserver(elements);
 	} else {
     elements.forEach(element => {
-      element.classList.add('animate')
+      element.classList.add('-animator')
     });
   }
 	
