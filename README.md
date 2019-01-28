@@ -15,7 +15,7 @@ You have to follow two steps to use it
 1 - You have to import the CSS, for you to import only once, import in the main folder of your project.
 
 ```css
-@import '~showllable/dist/css/style';
+@import '~showllable/dist/css/style.css';
 ```
 
 2 - Import the Javascript file from the library into your project, either in HTML or in your main JS file
