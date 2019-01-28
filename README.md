@@ -2,6 +2,12 @@
 
 is a simple way to apply animations to your pages, the focus of the library and animations that your elements appear in the course of the page scroll.
 
+## Installation
+
+```
+npm i showllable
+```
+
 How to use
 
 You have to follow two steps to use it
