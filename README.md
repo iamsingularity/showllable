@@ -35,10 +35,12 @@ showllable()
 After doing these two steps you are free to use apply the animations in your entire project, just go to the element you want to animate and put a date-anime attribute with the value symbolizing the side you want to animate
 
 ```html
-<div data-anime='left'></div>
-<div data-anime='right'></div>
 <div data-anime='top'></div>
+<div data-anime='right'></div>
 <div data-anime='bottom'></div>
+<div data-anime='left'></div>
+<div data-anime='rotate-to-right'></div>
+<div data-anime='rotate-to-left'></div>
 ```
 
 Ready ! just use the scroll of the page that the indicated elements will animate with the position that you defined
