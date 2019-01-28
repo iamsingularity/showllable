@@ -1,50 +1,33 @@
 const showllable = () => {
-  document.addEventListener('DOMContentLoaded', () => {
-    const debounce = function(func, wait, immediate) {
-      let timeout;
-      return function(...args) {
-        const context = this;
-        const later = function () {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };
-    
-    const target = document.querySelectorAll('[data-anime]');
-    const animationClass = 'animate';
-    
-    function animeScroll() {
-      const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-      target.forEach(function(element) {
-        if((windowTop) > element.offsetTop) {
-          element.classList.add(animationClass);
-        } else {
-          element.classList.remove(animationClass);
-        }
-      })
-    }
-    
-    animeScroll();
-    
-    if(target.length) {
-      window.addEventListener('scroll', debounce(function() {
-        animeScroll();
-      }, 200));
-    }
-    
-  });
-  
+	const elements = document.querySelectorAll('[data-anime]');
+
+	const intersectionConfig = {
+		root: null,
+		threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.0]
+	};
+
+	const myObserver = new IntersectionObserver((entries, observer) => {
+		
+		if (entries.length === 0) {
+			observer.disconnect();
+		}
+
+		entries.forEach(entry => {
+			if (entry.intersectionRatio > 0) {
+				entry.target.classList.add('animate');
+			} else {
+				entry.target.classList.remove('animate');
+			}
+
+		});
+
+	}, intersectionConfig);
+
+
+	elements.forEach(element => {
+		myObserver.observe(element);
+	});
+	
 }
 
-if (typeof window !== 'undefined' && window) {
-  if (typeof module === 'object' && module.exports) {
-	  module.exports = showllable;
-	} else {
-	  window.showlllable = showllable;
-  }
-} 
+export default showllable;
