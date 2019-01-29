@@ -3,20 +3,24 @@
   transition: .7s;
 }
 
-[data-anime="top"] {
-  transform: translate3d(0, -50px, 0);
+[data-anime="top"], 
+[data-anime="top-delay"] {
+  transform: translate3d(0, -90px, 0);
 }
 
-[data-anime="right"] {
-  transform: translate3d(50px, 0, 0);
+[data-anime="right"], 
+[data-anime="right-delay"] {
+  transform: translate3d(90px, 0, 0);
 }
 
-[data-anime="bottom"] {
-  transform: translate3d(0, 50px, 0);
+[data-anime="bottom"], 
+[data-anime="bottom-delay"] {
+  transform: translate3d(0, 90px, 0);
 }
 
-[data-anime="left"] {
-  transform: translate3d(-50px, 0, 0);
+[data-anime="left"], 
+[data-anime="left-delay"] {
+  transform: translate3d(-90px, 0, 0);
 }
 
 [data-anime="rotate-to-right"] {
