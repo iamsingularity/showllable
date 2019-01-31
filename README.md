@@ -47,6 +47,12 @@ After doing these two steps you are free to use apply the animations in your ent
 <div data-anime='left'></div>
 <div data-anime='rotate-to-right'></div>
 <div data-anime='rotate-to-left'></div>
+<div data-anime='top-delay'></div>
+<div data-anime='right-delay'></div>
+<div data-anime='bottom-delay'></div>
+<div data-anime='left-delay'></div>
 ```
+
+The anime date with 'delay', we usually use for lists of elements that we want to appear in a queue.
 
 Ready ! just use the scroll of the page that the indicated elements will animate with the position that you defined.
