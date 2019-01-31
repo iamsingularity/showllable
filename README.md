@@ -55,4 +55,7 @@ After doing these two steps you are free to use apply the animations in your ent
 
 The anime date with 'delay', we usually use for lists of elements that we want to appear in a queue.
 
+***Be careful, make sure the DOM is complete, otherwise we can manipulate it wrongly.
+One idea would be to invoke the showllable only in the DOMContentLoaded event. In a version not so far away we will treat this for you.***
+
 Ready ! just use the scroll of the page that the indicated elements will animate with the position that you defined.
